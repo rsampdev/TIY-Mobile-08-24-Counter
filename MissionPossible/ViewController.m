@@ -10,20 +10,31 @@
 
 @interface ViewController ()
 
+@property (strong, nonatomic) IBOutlet UIButton * counterButton;
+
+- (IBAction)setCounterButtonText:(UIButton *)sender;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    [self.counterButton setTitle:[NSString stringWithFormat:@"%@", @(0)] forState:UIControlStateNormal];
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+
+- (IBAction)setCounterButtonText:(UIButton *)sender {
+    NSString * counterString = self.counterButton.titleLabel.text;
+    NSInteger newCounterValue = [counterString integerValue];
+    counterString = [NSString stringWithFormat:@"%@", @(++newCounterValue)];
+    [self.counterButton setTitle:counterString forState:UIControlStateNormal];
+}
 
 @end
