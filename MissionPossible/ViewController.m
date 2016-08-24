@@ -10,9 +10,12 @@
 
 @interface ViewController ()
 
-@property (strong, nonatomic) IBOutlet UIButton * counterButton;
+@property (strong, nonatomic) IBOutlet UIButton * leftCounterButton;
+@property (strong, nonatomic) IBOutlet UIButton * rightCounterButton;
 
-- (IBAction)setCounterButtonText:(UIButton *)sender;
+- (IBAction)setLeftCounterButtonText:(UIButton *)sender;
+
+- (IBAction)setRightCounterButtonText:(UIButton *)sender;
 
 @end
 
@@ -21,20 +24,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.counterButton setTitle:[NSString stringWithFormat:@"%@", @(0)] forState:UIControlStateNormal];
+    [self.leftCounterButton setTitle:[NSString stringWithFormat:@"%@", @(0)] forState:UIControlStateNormal];
+    [self.rightCounterButton setTitle:[NSString stringWithFormat:@"%@", @(0)] forState:UIControlStateNormal];
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
-- (IBAction)setCounterButtonText:(UIButton *)sender {
-    NSString * counterString = self.counterButton.titleLabel.text;
+- (IBAction)setLeftCounterButtonText:(UIButton *)sender {
+    NSString * counterString = self.leftCounterButton.titleLabel.text;
     NSInteger newCounterValue = [counterString integerValue];
     counterString = [NSString stringWithFormat:@"%@", @(++newCounterValue)];
-    [self.counterButton setTitle:counterString forState:UIControlStateNormal];
+    [self.leftCounterButton setTitle:counterString forState:UIControlStateNormal];
+}
+
+- (IBAction)setRightCounterButtonText:(UIButton *)sender {
+    NSString * counterString = self.rightCounterButton.titleLabel.text;
+    NSInteger newCounterValue = [counterString integerValue];
+    counterString = [NSString stringWithFormat:@"%@", @(++newCounterValue)];
+    [self.rightCounterButton setTitle:counterString forState:UIControlStateNormal];
 }
 
 @end
