@@ -50,6 +50,8 @@
 }
 
 - (IBAction)resetCounterButtonValues:(UIButton *)sender {
+    self.leftCounterButtonValue = 0;
+    self.rightCounterButtonValue = 0;
     [self.leftCounterButton setTitle:@"0" forState:UIControlStateNormal];
     [self.rightCounterButton setTitle:@"0" forState:UIControlStateNormal];
 }
