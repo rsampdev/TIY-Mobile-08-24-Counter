@@ -37,9 +37,18 @@
                                     <action selector="setLeftCounterButtonText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J1C-a8-si5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0q0-tu-5Qz">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcP-bQ-i2g">
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetCounterButtonValues:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jFj-az-WrL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gme-pc-spy">
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="0q0-tu-5Qz" secondAttribute="height" multiplier="1:1" id="l2J-Fj-sr3"/>
+                                    <constraint firstAttribute="width" secondItem="Gme-pc-spy" secondAttribute="height" multiplier="1:1" id="XXX-s6-8LF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -47,20 +56,16 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="setRightCounterButtonText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="krv-5e-hta"/>
+                                    <action selector="setRightCounterButtonText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7LW-uq-XZy"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqR-09-16t">
-                                <frame key="frameInset" minX="69" minY="186" width="42" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Them" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9h-d2-DhP">
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Them" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYd-Cv-Pr4">
-                                <frame key="frameInset" minX="188" minY="186" width="77" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xno-d7-mhD">
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -70,21 +75,29 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fo6-wu-M2Z" secondAttribute="bottom" id="01o-lQ-saZ"/>
                             <constraint firstItem="Edf-uj-Pt9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0pq-D3-kad"/>
                             <constraint firstItem="Edf-uj-Pt9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="32" id="7TF-17-b2o"/>
-                            <constraint firstItem="0q0-tu-5Qz" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="-32" id="8cJ-Id-Grl"/>
+                            <constraint firstItem="Gme-pc-spy" firstAttribute="top" secondItem="Y9h-d2-DhP" secondAttribute="bottom" constant="8" id="8Ux-UP-FRZ"/>
+                            <constraint firstAttribute="bottom" secondItem="vcP-bQ-i2g" secondAttribute="bottom" constant="20" symbolic="YES" id="8uP-VQ-BGd"/>
+                            <constraint firstItem="xno-d7-mhD" firstAttribute="centerX" secondItem="Edf-uj-Pt9" secondAttribute="centerX" id="CIY-we-uhH"/>
+                            <constraint firstItem="Gme-pc-spy" firstAttribute="baseline" secondItem="Edf-uj-Pt9" secondAttribute="baseline" id="EsP-3d-tSZ"/>
                             <constraint firstItem="fo6-wu-M2Z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HR0-Y1-wbI"/>
+                            <constraint firstItem="Y9h-d2-DhP" firstAttribute="leading" secondItem="xno-d7-mhD" secondAttribute="trailing" constant="67" id="Oxz-Hx-o7d"/>
+                            <constraint firstItem="vcP-bQ-i2g" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="64" id="TTw-kr-ycQ"/>
+                            <constraint firstItem="Gme-pc-spy" firstAttribute="width" secondItem="Gme-pc-spy" secondAttribute="height" multiplier="1:1" id="css-AY-Xto"/>
                             <constraint firstAttribute="trailing" secondItem="fo6-wu-M2Z" secondAttribute="trailing" id="ioj-Uh-7U1"/>
                             <constraint firstItem="fo6-wu-M2Z" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lEu-oL-8iX"/>
-                            <constraint firstItem="0q0-tu-5Qz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xwW-0q-Ia2"/>
+                            <constraint firstItem="Gme-pc-spy" firstAttribute="leading" secondItem="Edf-uj-Pt9" secondAttribute="trailing" constant="47" id="pns-qP-omb"/>
+                            <constraint firstItem="Edf-uj-Pt9" firstAttribute="top" secondItem="xno-d7-mhD" secondAttribute="bottom" constant="8" id="v03-c9-bvU"/>
+                            <constraint firstItem="vcP-bQ-i2g" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="-64" id="yic-lc-aqq"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="leftCounterButton" destination="Edf-uj-Pt9" id="G7E-a3-Pqi"/>
-                        <outlet property="rightCounterButton" destination="0q0-tu-5Qz" id="bKf-7E-YFK"/>
+                        <outlet property="rightCounterButton" destination="Gme-pc-spy" id="vg1-wl-emP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="15" y="7.394366197183099"/>
+            <point key="canvasLocation" x="-326.25" y="-57.04225352112676"/>
         </scene>
     </scenes>
     <resources>

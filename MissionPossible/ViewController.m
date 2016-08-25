@@ -17,6 +17,8 @@
 
 - (IBAction)setRightCounterButtonText:(UIButton *)sender;
 
+- (IBAction)resetCounterButtonValues:(UIButton *)sender;
+
 @end
 
 @implementation ViewController
@@ -26,7 +28,6 @@
     
     [self.leftCounterButton setTitle:[NSString stringWithFormat:@"%@", @(0)] forState:UIControlStateNormal];
     [self.rightCounterButton setTitle:[NSString stringWithFormat:@"%@", @(0)] forState:UIControlStateNormal];
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,6 +47,11 @@
     NSInteger newCounterValue = [counterString integerValue];
     counterString = [NSString stringWithFormat:@"%@", @(++newCounterValue)];
     [self.rightCounterButton setTitle:counterString forState:UIControlStateNormal];
+}
+
+- (IBAction)resetCounterButtonValues:(UIButton *)sender {
+    [self.leftCounterButton setTitle:@"0" forState:UIControlStateNormal];
+    [self.rightCounterButton setTitle:@"0" forState:UIControlStateNormal];
 }
 
 @end
